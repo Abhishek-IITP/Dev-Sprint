@@ -26,6 +26,7 @@ gsap.to(".demo1",{
     }
 
 })
+
 gsap.to(".demo2",{
     opacity: 10,
     duration:0.5,
@@ -276,3 +277,105 @@ function gsapAnimationssss(){
 }
 textSplitteingssss();
 gsapAnimationssss();
+
+
+gsap.to(".img9P1",{
+    opacity: 10,
+    duration:0.5,
+    scrollTrigger:{
+        trigger:"#page8",
+        start:"top -100%",
+        end:"bottom top",
+        scrub: true,
+        stagger: 0.1,    
+    }
+})
+gsap.to(".img9P2",{
+    opacity: 10,
+    duration:0.5,
+    scrollTrigger:{
+        trigger:"#page8",
+        start:"top -70%",
+        end:"bottom top",
+        scrub: true,
+        stagger: 0.1, 
+        marker: true   
+    }
+})
+gsap.to(".img9P3",{
+    opacity: 10,
+    duration:0.5,
+    scrollTrigger:{
+        trigger:"#page8",
+        start:"top -70%",
+        end:"bottom top",
+        scrub: true,
+        stagger: 0.1,    
+    }
+})
+gsap.to(".img9P4",{
+    opacity: 10,
+    duration:0.5,
+    scrollTrigger:{
+        trigger:"#page8",
+        start:"top -50%",
+        end:"bottom top",
+        scrub: true,
+        stagger: 0.1,    
+    }
+})
+gsap.to(".img9P5",{
+    opacity: 10,
+    duration:0.5,
+    scrollTrigger:{
+        trigger:"#page8",
+        start:"top -50%",
+        end:"bottom top",
+        scrub: true,
+        stagger: 0.1,    
+    }
+})
+gsap.to(".img9P6",{
+    opacity: 10,
+    duration:0.5,
+    scrollTrigger:{
+        trigger:"#page8",
+        start:"top -50%",
+        end:"bottom top",
+        scrub: true,
+        stagger: 0.1,    
+    }
+})
+gsap.to(".img9P7",{
+    opacity: 10,
+    duration:0.5,
+    scrollTrigger:{
+        trigger:"#page8",
+        start:"top -40%",
+        end:"bottom top",
+        scrub: true,
+        stagger: 0.1,    
+    }
+})
+gsap.to(".img9P8",{
+    opacity: 10,
+    duration:0.5,
+    scrollTrigger:{
+        trigger:"#page8",
+        start:"top -50%",
+        end:"bottom top",
+        scrub: true,
+        stagger: 0.1,    
+    }
+})
+gsap.to(".img9P9",{
+    opacity: 10,
+    duration:0.5,
+    scrollTrigger:{
+        trigger:"#page8",
+        start:"top -40%",
+        end:"bottom top",
+        scrub: true,
+        stagger: 0.1,    
+    }
+})
