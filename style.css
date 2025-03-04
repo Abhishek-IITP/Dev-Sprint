@@ -62,8 +62,8 @@ header>.btn{
     justify-content: center;
     gap: 10px;
     z-index: 999;
-    /* border: 2px solid wheat; */
-    /* margin-right: -.35rem; */   
+    /* border: 1px solid white; */
+    min-width: 16vw;  
 }
 
 .login{
@@ -95,24 +95,77 @@ header>.btn{
     border: none;
 }
 
+
+.hamburger {
+    display: none;
+    font-size: 30px;
+    color: #f3ede4;
+    cursor: pointer;
+    width: 10vw;
+}
+
+.mobile-btn {
+    display: none;
+}
+
+@media screen and (max-width: 768px) {
+    .hamburger {
+        display: block;
+        position: absolute;
+        right: 40px;
+        top: 25px;
+    }
+    
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 85.6px;
+        left: 0;
+        width: 100%;
+        background-color: #122315;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        padding: 20px 0;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .btn {
+        display: none;
+    }
+
+    .mobile-btn {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 20px;
+    }
+}
+
+
+
+
 #main{
-    width: 100%;
+    min-width: 100%;
     min-height: 100%;
     position: relative;
 }
 
 #page{
-    width: 100%;
+    min-width: 100%;
     min-height: 100vh;
     background-color: #122315;
     padding-top: 150px;
 
 }
 .headd{
-    line-height: 14vh;
+    line-height: 7.5vw;
 }
 .heading1{
-    font-size: 16.5vh;
+    font-size: 8.2vw;
     text-align: center;
     color: #f3ede4;
     font-family: GraphikBold;
@@ -120,8 +173,8 @@ header>.btn{
     opacity: 0;
 }
 .heading2{
-    letter-spacing: -5px;
-    font-size: 17.5vh;
+    letter-spacing: -2px;
+    font-size: 9.5vw;
     text-align: center;
     color: #55DD4A;
     font-family: GraphikBold;
@@ -130,7 +183,7 @@ header>.btn{
 
 #page>p{
     /* border: 1px solid white; */
-    font-size: 16px;
+    font-size: 1em;
     text-align: center;
     color: #f3ede4;
     font-family: GraphikRegular;
@@ -139,7 +192,7 @@ header>.btn{
 }
 
 .imageDiv{
-    width: 100%;
+    min-width: 100%;
     height: 70vh;
     background: url(/img1/heroBg.svg);
     object-fit: cover;
@@ -209,11 +262,11 @@ header>.btn{
     opacity: 0;
 }
 
-.fund1{
+/* .fund1{
     width: 11vw;
     height: 8vh;
     font-size: large;
-}
+} */
 .demo4{
     position: absolute;
     bottom: 75px;
@@ -860,7 +913,6 @@ header>.btn{
     color: #f3ede4;
     font-family: GraphikBold;
 }
-
 footer {
     background-color: #122315;
     color: #f3ede4;
@@ -870,15 +922,18 @@ footer {
 
 .footer-container {
     display: flex;
-    justify-content: space-between;
     flex-wrap: wrap;
+    justify-content: space-between;
     max-width: 1200px;
     margin: auto;
     padding: 0 20px;
 }
 
+/* Logo Section */
 .footer-logo {
-    width: 25%;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
 }
 
 .footer-logo img {
@@ -891,10 +946,14 @@ footer {
     opacity: 0.8;
 }
 
+/* Footer Columns */
 .footer-links,
 .footer-social,
 .footer-newsletter {
-    width: 20%;
+    width: 30%;
+    min-width: 200px;
+    text-align: center;
+    margin-bottom: 20px;
 }
 
 .footer-links h4,
@@ -925,13 +984,18 @@ footer {
     opacity: 1;
     text-decoration: underline;
     color: #55DD4A;
+}
 
+/* Social Icons */
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
 }
 
 .social-icons a {
     color: #f3ede4;
     font-size: 18px;
-    margin-right: 15px;
     transition: 0.3s;
 }
 
@@ -939,9 +1003,12 @@ footer {
     color: #55DD4A;
 }
 
+/* Newsletter */
 .footer-newsletter form {
     display: flex;
+    flex-wrap: wrap;
     gap: 10px;
+    justify-content: center;
 }
 
 .footer-newsletter input {
@@ -949,6 +1016,7 @@ footer {
     padding: 10px;
     border: none;
     border-radius: 5px;
+    max-width: 250px;
 }
 
 .footer-newsletter button {
@@ -965,11 +1033,40 @@ footer {
     background-color: #44BB3A;
 }
 
+/* Footer Bottom */
 .footer-bottom {
     text-align: center;
     margin-top: 30px;
     font-size: 14px;
     opacity: 0.8;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-links,
+    .footer-social,
+    .footer-newsletter {
+        width: 100%;
+    }
+
+    .footer-newsletter form {
+        flex-direction: column;
+    }
+
+    .footer-newsletter input {
+        width: 100%;
+        margin: auto;
+    }
+
+    .footer-newsletter button {
+        width: 42.3%;
+        margin: auto;
+    }
 }
 
 /* Slider Container */

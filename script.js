@@ -1,3 +1,10 @@
+// hamburger
+function toggleMenu() {
+    document.querySelectorAll(".nav-links").classList.toggle("active");
+}
+
+
+
 gsap.registerPlugin(ScrollTrigger);
 
 gsap.to(".heading1",{
