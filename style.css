@@ -21,6 +21,8 @@ html {
 body {
     height: 100%;
     width: 100%;
+overflow-x: hidden;
+
 }
 
 .cursor {
@@ -181,7 +183,6 @@ header>.btn {
     min-height: 100vh;
     background-color: #122315;
     padding-top: 150px;
-
 }
 
 .headd {
