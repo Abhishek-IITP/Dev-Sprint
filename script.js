@@ -1,8 +1,13 @@
-// hamburger
 function toggleMenu() {
     document.querySelectorAll(".nav-links").classList.toggle("active");
 }
 
+var crsr = document.querySelector(".cursor")
+var main = document.querySelector("#main")
+main.addEventListener("mousemove",function(ket){
+    crsr.style.left=ket.x+"px"
+    crsr.style.top=ket.y+"px"
+})
 
 
 gsap.registerPlugin(ScrollTrigger);
@@ -20,75 +25,64 @@ gsap.to(".heading2",{
 })
 
 
-gsap.to(".demo1",{
-    opacity: 10,
-    duration:0.5,
-    x:100,
-    scrollTrigger:{
-        trigger:"#page",
-        start:"top -100%",
-        end:"bottom top",
-        scrub: true,
-        stagger: 0.1,    
-    }
+var tl = gsap.timeline({scrollTrigger:{
+    trigger:"#page2",
+    start:"-0% 50%",
+    end:"50% 50%",
+    scrub:true,
+}})
 
+tl.from(".pic1",{
+    x:-200,
+    y:200,
+},"tree")
+tl.from(".pic2",{
+    x:-200,
+    y:100,
+}, "tree")
+tl.from(".pic4",{
+    x:1200,
+    y:200,
+}, "tree")
+tl.from(".pic5",{
+    x:1500,
+    y:100,
+},"tree")
+
+var pk = gsap.timeline({scrollTrigger:{
+    trigger:"#page9",
+    start:"0%  50%",
+    end:"30% 50%",
+    scrub:true,
+    // markers:true,
+}})
+
+pk.from(".cal1",{
+    opacity:0.5,
 })
-
-gsap.to(".demo2",{
-    opacity: 10,
-    duration:0.5,
-    x:-100,
-    y:30,
-    scrollTrigger:{
-        trigger:"#page",
-        start:"top -70%",
-        end:"bottom top",
-        scrub: true,
-        stagger: 0.1,    
-    }
-
+pk.from(".cal2",{
+    opacity:0.5,
 })
-gsap.to(".demo3",{
-    opacity: 10,
-    duration:0.5,
-    x:-300,
-    y:25,
-    scrollTrigger:{
-        trigger:"#page",
-        start:"top 10%",
-        end:"bottom top",
-        scrub: true,
-        stagger: 0.1,    
-    }
-
+pk.from(".cal3",{
+    opacity:0.5,
 })
-gsap.to(".demo4",{
-    opacity: 10,
-    duration:0.5,
-    x:2250,
-    y:25,
-    scrollTrigger:{
-        trigger:"#abhi",
-        start:"top 25%",
-        end:"bottom top",
-        scrub: true,
-        stagger: 0.1,    
-    }
-
+pk.from(".cal4",{
+    opacity:0.5,
 })
-gsap.to(".demo5",{
-    opacity: 10,
-    duration:0.5,
-    x:-2200,
-    // y:25,
-    scrollTrigger:{
-        trigger:"#abhi",
-        start:"top 25%",
-        end:"bottom top",
-        scrub: true,
-        stagger: 0.1,    
-    }
-
+pk.from(".cal5",{
+    opacity:0.5,
+})
+pk.from(".cal6",{
+    opacity:0.5,
+})
+pk.from(".cal7",{
+    opacity:0.5,
+})
+pk.from(".cal8",{
+    opacity:0.5,
+})
+pk.from(".cal9",{
+    opacity:0.5,
 })
 
 
@@ -306,7 +300,6 @@ gsap.to(".img9P2",{
         end:"bottom top",
         scrub: true,
         stagger: 0.1, 
-        marker: true   
     }
 })
 gsap.to(".img9P3",{
